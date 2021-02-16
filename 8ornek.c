@@ -1,30 +1,31 @@
 #include<stdio.h>
+#include<stdlib.h>
 
+
+struct dogum_gunu{
+
+int gun;
+int ay;
+int yil;
+
+
+
+};
+
+struct kisi{
+
+struct dogum_gunu dg;
+char isim[40];
+
+};
 int main()
-
 {
-    int vize,final;
-    float ort;
-     printf("Lutfen vize notunuzu giriniz:\n");
-     scanf("%d",&vize);
-     printf("Lutfen final notunuzu giriniz:\n");
-     scanf("%d",&final);
-
-     ort=vize*0.4+final*0.6;
-
-     printf("Ogrencinin ortlamasi:%.2ftir\n",ort);
-
-     if(ort>=60)
-        {
-            printf("Ogrenci dersi gecti\n");
-        }
-
-     else
-     {
-        printf("Ogrenci dersten kaldý\n");
-     }
-
-
-    return 0;
+    typedef struct kisi kisi_bilgisi;
+    kisi_bilgisi ali;
+    ali.dg.ay=10;
+    printf("%d",ali.dg.ay);
 }
+
+
+
 
